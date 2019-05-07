@@ -1,5 +1,9 @@
 def consolidate_cart(cart)
-  # code here
+  hashed_cart = {}
+  cart.each do |item|
+    hashed_cart[item.keys.join] = item.values.join
+  end
+  hashed_cart
 end
 
 def apply_coupons(cart, coupons)
